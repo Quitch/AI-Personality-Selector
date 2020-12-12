@@ -1,0 +1,30 @@
+{
+  "context": "client",
+  "identifier": "com.pa.quitch.aiPersonalitySelector",
+  "display_name": "AI Personality Selector",
+  "description": "Allow personalities to be selected independent of AI difficulty level.",
+  "author": "Quitch",
+  "version": "dev",
+  "build": "115128",
+  "date": "2020-12-12",
+  "signature": " ",
+  "forum": "",
+  "category": [
+    "ai",
+    "ki",
+    "ia",
+    "si",
+    "ИИ",
+    "电脑",
+    "電腦",
+    "titans",
+    "skirmish"
+  ],
+  "icon": "",
+  "scenes": {
+    "new_game": [
+      "coui://ui/mods/com.pa.quitch.aiPersonalitySelector/slot_modifications.js"
+    ]
+  },
+  "priority": 100
+}
