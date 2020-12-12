@@ -1,0 +1,10 @@
+<!-- ko if: slot.ai -->
+<!-- ko if: $index() === 0 || !army.sharedArmy() -->
+<div class="form-control-personality">
+  <select
+    data-bind="options: $root.aiPersonalityNames, optionsText: $root.getAIPersonalityDescription, selectPicker: slot.aiPersonality"
+    data-width="106px"
+  ></select>
+</div>
+<!-- /ko -->
+<!-- /ko -->
