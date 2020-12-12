@@ -1,8 +1,19 @@
 <!-- ko if: slot.ai -->
+<!-- ko if: model.isGameCreator -->
 <!-- ko if: $index() === 0 || !army.sharedArmy() -->
 <div class="form-control-personality">
   <select
     data-bind="options: $root.aiPersonalityNames, optionsText: $root.getAIPersonalityDescription, selectPicker: slot.aiPersonality"
+    data-width="106px"
+  ></select>
+</div>
+<!-- /ko -->
+<!-- /ko -->
+<!-- ko ifnot: model.isGameCreator -->
+<div class="form-control-personality disabled">
+  <select
+    disabled
+    data-bind="options: $root.aiPersonalityNames, selectPicker: slot.aiPersonality"
     data-width="106px"
   ></select>
 </div>
