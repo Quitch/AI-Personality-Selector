@@ -26,5 +26,6 @@
       "coui://ui/mods/com.pa.quitch.aiPersonalitySelector/slot_modifications.js"
     ]
   },
-  "priority": 100
+  "priority": 100,
+  "framework": true
 }
