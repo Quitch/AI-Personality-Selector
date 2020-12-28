@@ -1,26 +1,19 @@
 var aiPersonalitySelectorLoaded;
 
-function aiPersonalitySelector() {
-  if (aiPersonalitySelectorLoaded) {
-    return;
-  }
-
-  api.debug.log("Loading AI Personality Selector");
-
+if (!aiPersonalitySelectorLoaded) {
   aiPersonalitySelectorLoaded = true;
 
-  $(".form-control-personality")
-    .parent()
-    .append(
-      loadHtml(
-        "coui://ui/mods/com.pa.quitch.aiPersonalitySelector/personality_selector.html"
-      )
-    );
-  locUpdateDocument();
-}
-
-try {
-  aiPersonalitySelector();
-} catch (e) {
-  console.error(e);
+  try {
+    $(".form-control-personality")
+      .parent()
+      .append(
+        loadHtml(
+          "coui://ui/mods/com.pa.quitch.aiPersonalitySelector/personality_selector.html"
+        )
+      );
+    locUpdateDocument();
+  } catch (e) {
+    console.error(e);
+    console.error(JSON.stringify(e));
+  }
 }
